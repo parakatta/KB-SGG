@@ -67,7 +67,7 @@ def main():
     tab1, tab2 = st.tabs(["About", "Demo"])
     with tab1:
         st.title("Knowledge-based Scene Graph Generation in Medical Field")
-        im1 = Image.open('G:/knowledge_graphs_faster_rcnn/faster_rcnn_custom/main_img.png')
+        im1 = Image.open('../fastercnn-pytorch-training-pipeline/main_img.png')
         st.image(im1, "Example of an image and it's scene graph")
         st.write('''
                     **Scene understanding** in the medical field  based on visual context using object detection and representing it in the form of knowledge graphs in order to derive conclusions or understand contexts.
@@ -86,7 +86,7 @@ def main():
         st.divider()
         st.subheader("Methodology")
         #im4 = Image.open('G:/knowledge_graphs_faster_rcnn/block1.png')
-        im4 = Image.open('G:/knowledge_graphs_faster_rcnn/faster_rcnn_custom/block1.png')
+        im4 = Image.open('../fastercnn-pytorch-training-pipeline/arch_img.png')
         st.image(im4, 'Architecture')
         st.write('''
                 We used Faster RCNN model to train our custom dataset. Restricting our project to the medical field, our dataset consists of 11 classes.
@@ -96,7 +96,7 @@ def main():
                 ''')
         # Allow the user to upload an image file
         #im5 = Image.open('G:/knowledge_graphs_faster_rcnn/graph (1).png')
-        im5 = Image.open('G:/knowledge_graphs_faster_rcnn/faster_rcnn_custom/graph (1).png')
+        im5 = Image.open('../fastercnn-pytorch-training-pipeline/kb_full.png')
         st.image(im5, 'Knowledge Base')
 
         st.divider()
