@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>syringes58_jpg.rf.e374b8e3946c8b98b55148601890a90f.jpg</filename>
+	<path>syringes58_jpg.rf.e374b8e3946c8b98b55148601890a90f.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>syringe</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>70</xmin>
+			<xmax>531</xmax>
+			<ymin>49</ymin>
+			<ymax>294</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>ventilator63_jpg.rf.400c6cd73d51196c4e5bf7d808dab85b.jpg</filename>
+	<path>ventilator63_jpg.rf.400c6cd73d51196c4e5bf7d808dab85b.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ventilator</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>141</xmin>
+			<xmax>525</xmax>
+			<ymin>52</ymin>
+			<ymax>641</ymax>
+		</bndbox>
+	</object>
+</annotation>

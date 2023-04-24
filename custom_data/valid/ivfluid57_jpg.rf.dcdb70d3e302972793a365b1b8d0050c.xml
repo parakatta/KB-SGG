@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>ivfluid57_jpg.rf.dcdb70d3e302972793a365b1b8d0050c.jpg</filename>
+	<path>ivfluid57_jpg.rf.dcdb70d3e302972793a365b1b8d0050c.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>iv_fluids</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>344</xmin>
+			<xmax>469</xmax>
+			<ymin>109</ymin>
+			<ymax>581</ymax>
+		</bndbox>
+	</object>
+</annotation>

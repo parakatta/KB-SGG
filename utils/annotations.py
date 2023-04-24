@@ -21,12 +21,13 @@ def inference_annotations(
 
     lw = max(round(sum(orig_image.shape) / 2 * 0.003), 2)  # Line width.
     tf = max(lw - 1, 1) # Font thickness.
-    
+    pred_clas=[]
     # Draw the bounding boxes and write the class name on top of it.
     for j, box in enumerate(draw_boxes):
         p1 = (int(box[0]/image.shape[1]*width), int(box[1]/image.shape[0]*height))
         p2 = (int(box[2]/image.shape[1]*width), int(box[3]/image.shape[0]*height))
         class_name = pred_classes[j]
+        pred_clas.append(class_name)
         color = colors[classes.index(class_name)]
         cv2.rectangle(
             orig_image,
@@ -65,7 +66,7 @@ def inference_annotations(
                 thickness=tf, 
                 lineType=cv2.LINE_AA
             )
-    return orig_image
+    return orig_image, pred_clas
 
 def draw_text(
         img,

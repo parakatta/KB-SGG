@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>doctors62_jpg.rf.f8f8e8a75d8cd476182d666925b0f617.jpg</filename>
+	<path>doctors62_jpg.rf.f8f8e8a75d8cd476182d666925b0f617.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>face_mask</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>269</xmin>
+			<xmax>506</xmax>
+			<ymin>269</ymin>
+			<ymax>562</ymax>
+		</bndbox>
+	</object>
+</annotation>

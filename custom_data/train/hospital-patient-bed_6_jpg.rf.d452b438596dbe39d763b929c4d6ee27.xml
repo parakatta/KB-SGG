@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>hospital-patient-bed_6_jpg.rf.d452b438596dbe39d763b929c4d6ee27.jpg</filename>
+	<path>hospital-patient-bed_6_jpg.rf.d452b438596dbe39d763b929c4d6ee27.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>patient_bed</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>35</xmin>
+			<xmax>631</xmax>
+			<ymin>148</ymin>
+			<ymax>493</ymax>
+		</bndbox>
+	</object>
+</annotation>

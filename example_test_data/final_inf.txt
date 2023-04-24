@@ -1,0 +1,9 @@
+Icu_room HAS Iv_fluids
+Patient RECEIVES Iv_fluids
+Icu_room HAS Iv_fluids
+Patient RECEIVES Iv_fluids
+Doctor WEARS Face_mask
+Icu_room HAS Patient_bed
+Patient LAY_ON Patient_bed
+Icu_room HAS Patient_bed
+Patient LAY_ON Patient_bed

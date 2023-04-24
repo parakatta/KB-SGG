@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>stethoscope40_jpg.rf.a6da2cfed998e1ea6faffa7d88610d07.jpg</filename>
+	<path>stethoscope40_jpg.rf.a6da2cfed998e1ea6faffa7d88610d07.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>stethoscope</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>30</xmin>
+			<xmax>530</xmax>
+			<ymin>34</ymin>
+			<ymax>589</ymax>
+		</bndbox>
+	</object>
+</annotation>

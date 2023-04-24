@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>oxygenmasks25_jpg.rf.65e743a5c1e8ab0f519459222f58c990.jpg</filename>
+	<path>oxygenmasks25_jpg.rf.65e743a5c1e8ab0f519459222f58c990.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>oxygen_mask</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>170</xmin>
+			<xmax>444</xmax>
+			<ymin>57</ymin>
+			<ymax>517</ymax>
+		</bndbox>
+	</object>
+</annotation>

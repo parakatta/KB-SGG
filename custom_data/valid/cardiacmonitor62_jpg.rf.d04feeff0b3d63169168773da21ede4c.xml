@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>cardiacmonitor62_jpg.rf.d04feeff0b3d63169168773da21ede4c.jpg</filename>
+	<path>cardiacmonitor62_jpg.rf.d04feeff0b3d63169168773da21ede4c.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cardiac_monitor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>187</xmin>
+			<xmax>490</xmax>
+			<ymin>30</ymin>
+			<ymax>510</ymax>
+		</bndbox>
+	</object>
+</annotation>

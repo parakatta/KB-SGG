@@ -7,7 +7,7 @@ import time
 import argparse
 import yaml
 import matplotlib.pyplot as plt
-
+import streamlit as st
 from models.create_fasterrcnn_model import create_model
 from utils.annotations import inference_annotations
 from utils.general import set_infer_dir
@@ -55,7 +55,7 @@ def parse_opt():
     )
     parser.add_argument(
         '-th', '--threshold', 
-        default=0.3, 
+        default=0.45, 
         type=float,
         help='detection threshold'
     )
@@ -86,12 +86,6 @@ def parse_opt():
         dest='no_labels',
         action='store_true',
         help='do not show labels during on top of bounding boxes'
-    )
-    parser.add_argument(
-        '--square-img',
-        dest='square_img',
-        action='store_true',
-        help='whether to use square image resize, else use aspect ratio resize'
     )
     args = vars(parser.parse_args())
     return args
@@ -136,6 +130,7 @@ def main(args):
             CLASSES = checkpoint['data']['CLASSES']
         try:
             print('Building from model name arguments...')
+            st.write('Building from model name arguments...')
             build_model = create_model[str(args['model'])]
         except:
             build_model = create_model[checkpoint['model_name']]
@@ -170,9 +165,7 @@ def main(args):
         else:
             RESIZE_TO = frame_width
         # orig_image = image.copy()
-        image_resized = resize(
-            orig_image, RESIZE_TO, square=args['square_img']
-        )
+        image_resized = resize(orig_image, RESIZE_TO)
         image = image_resized.copy()
         # BGR to RGB
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -194,7 +187,7 @@ def main(args):
         outputs = [{k: v.to('cpu') for k, v in t.items()} for t in outputs]
         # Carry further only if there are detected boxes.
         if len(outputs[0]['boxes']) != 0:
-            orig_image = inference_annotations(
+            orig_image,pred_classes = inference_annotations(
                 outputs, 
                 detection_threshold, 
                 CLASSES,
@@ -213,12 +206,27 @@ def main(args):
         cv2.imwrite(f"{OUT_DIR}/{image_name}.jpg", orig_image)
         print(f"Image {i+1} done...")
         print('-'*50)
+        
 
     print('TEST PREDICTIONS COMPLETE')
-    cv2.destroyAllWindows()
+    
+    pred_c = set(pred_classes)
+    with open('../fastercnn-pytorch-training-pipeline/example_test_data/clas.txt','w') as file:
+        for pr in pred_c:
+            file.write(pr)
+            file.write('\n')
+    #cv2.destroyAllWindows()
     # Calculate and print the average FPS.
     avg_fps = total_fps / frame_count
     print(f"Average FPS: {avg_fps:.3f}")
+    with open('../fastercnn-pytorch-training-pipeline/example_test_data/score.txt','w') as fie:
+            fie.write(str(total_fps))
+            fie.write('\n')
+            fie.write(str(frame_count))
+            fie.write('\n')
+            fie.write(str(avg_fps))
+            fie.write('\n')
+    
 
 if __name__ == '__main__':
     args = parse_opt()

@@ -1,0 +1,4 @@
+patient_bed
+iv_fluids
+face_mask
+doctor

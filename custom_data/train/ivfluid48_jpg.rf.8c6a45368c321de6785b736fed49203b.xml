@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>ivfluid48_jpg.rf.8c6a45368c321de6785b736fed49203b.jpg</filename>
+	<path>ivfluid48_jpg.rf.8c6a45368c321de6785b736fed49203b.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>doctor</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>344</xmin>
+			<xmax>470</xmax>
+			<ymin>103</ymin>
+			<ymax>473</ymax>
+		</bndbox>
+	</object>
+</annotation>
