@@ -1,3 +1,4 @@
 outputs/ filter=lfs diff=lfs merge=lfs -text
 outputs/** filter=lfs diff=lfs merge=lfs -text
 outputs/**/* filter=lfs diff=lfs merge=lfs -text
+outputs/training/custom_training/last_model.pth filter=lfs diff=lfs merge=lfs -text
