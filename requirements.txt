@@ -9,6 +9,8 @@ Pillow
 PyYAML
 scikit-image
 scikit-learn
+py2neo
+plotly
 scipy
 torch==1.12.0
 torchvision==0.13.0
