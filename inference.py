@@ -211,7 +211,7 @@ def main(args):
     print('TEST PREDICTIONS COMPLETE')
     
     pred_c = set(pred_classes)
-    with open('../fastercnn-pytorch-training-pipeline/example_test_data/clas.txt','w') as file:
+    with open('./example_test_data/clas.txt','w') as file:
         for pr in pred_c:
             file.write(pr)
             file.write('\n')
@@ -219,7 +219,7 @@ def main(args):
     # Calculate and print the average FPS.
     avg_fps = total_fps / frame_count
     print(f"Average FPS: {avg_fps:.3f}")
-    with open('../fastercnn-pytorch-training-pipeline/example_test_data/score.txt','w') as fie:
+    with open('./example_test_data/score.txt','w') as fie:
             fie.write(str(total_fps))
             fie.write('\n')
             fie.write(str(frame_count))
