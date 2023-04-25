@@ -43,7 +43,7 @@ def get_classes():
 def run_inference(image_name):
     
 
-    OUT_DIR_NUM = int(OUT_DIR_NUM)
+    
     input_file = './example_test_data/test_image.jpg'
     weights_file = "./outputs/training/custom_training/last_model.pth"
    
@@ -58,6 +58,7 @@ def run_inference(image_name):
         OUT_DIR_NUM = fil.readline()
         print(OUT_DIR_NUM)
     fil.close()
+    OUT_DIR_NUM = int(OUT_DIR_NUM)
     output_file = f"./outputs/inference/res_{OUT_DIR_NUM}/.jpg"
     return output_file
 
