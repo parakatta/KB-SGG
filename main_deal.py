@@ -41,23 +41,24 @@ def get_classes():
 
 
 def run_inference(image_name):
-    OUT_DIR_NUM = 0
-    with open('./example_test_data/dir_num.txt', 'r') as fil:
-        OUT_DIR_NUM = fil.readline()
-        print(OUT_DIR_NUM)
-    fil.close()
+    
 
     OUT_DIR_NUM = int(OUT_DIR_NUM)
     input_file = './example_test_data/test_image.jpg'
     weights_file = "./outputs/training/custom_training/last_model.pth"
-    output_file = f"./outputs/inference/res_{OUT_DIR_NUM}/.jpg"
+   
 
     command = f"python inference.py --input {input_file} --weights {weights_file}"
 
     # command = "python inference.py --input /content/drive/MyDrive/faster-rcnn-test/fastercnn-pytorch-training-pipeline/example_test_data/operating-room.jpg --weights outputs/training/custom_training/last_model_state.pth"
 
     subprocess.call(command.split())
-
+    OUT_DIR_NUM = 0
+    with open('./example_test_data/dir_num.txt', 'r') as fil:
+        OUT_DIR_NUM = fil.readline()
+        print(OUT_DIR_NUM)
+    fil.close()
+    output_file = f"./outputs/inference/res_{OUT_DIR_NUM}/.jpg"
     return output_file
 
 
