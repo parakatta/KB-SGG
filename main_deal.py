@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 
 def get_scores():
     scores = []
-    with open('../fastercnn-pytorch-training-pipeline/example_test_data/score.txt', 'r') as fi:
+    with open('./example_test_data/score.txt', 'r') as fi:
         for line in fi:
             scores.append(line.strip('\n'))
     fi.close()
@@ -33,7 +33,7 @@ def get_scores():
 
 def get_classes():
     clas = []
-    with open('../fastercnn-pytorch-training-pipeline/example_test_data/clas.txt', 'r') as f:
+    with open('./example_test_data/clas.txt', 'r') as f:
         for line in f:
             clas.append(line.strip('\n'))
     f.close()
@@ -42,15 +42,15 @@ def get_classes():
 
 def run_inference(image_name):
     OUT_DIR_NUM = 0
-    with open('../fastercnn-pytorch-training-pipeline/example_test_data/dir_num.txt', 'r') as fil:
+    with open('./example_test_data/dir_num.txt', 'r') as fil:
         OUT_DIR_NUM = fil.readline()
         print(OUT_DIR_NUM)
     fil.close()
 
     OUT_DIR_NUM = int(OUT_DIR_NUM)
-    input_file = '../fastercnn-pytorch-training-pipeline/example_test_data/test_image.jpg'
-    weights_file = "../fastercnn-pytorch-training-pipeline/outputs/training/custom_training/last_model.pth"
-    output_file = f"../fastercnn-pytorch-training-pipeline/outputs/inference/res_{OUT_DIR_NUM}/.jpg"
+    input_file = './example_test_data/test_image.jpg'
+    weights_file = "./outputs/training/custom_training/last_model.pth"
+    output_file = f"./outputs/inference/res_{OUT_DIR_NUM}/.jpg"
 
     command = f"python inference.py --input {input_file} --weights {weights_file}"
 
@@ -67,7 +67,7 @@ def main():
     tab1, tab2 = st.tabs(["About", "Demo"])
     with tab1:
         st.title("Knowledge-based Scene Graph Generation in Medical Field")
-        im1 = Image.open('../fastercnn-pytorch-training-pipeline/main_img.png')
+        im1 = Image.open('./main_img.png')
         st.image(im1, "Example of an image and it's scene graph")
         st.write('''
                     **Scene understanding** in the medical field  based on visual context using object detection and representing it in the form of knowledge graphs in order to derive conclusions or understand contexts.
@@ -86,7 +86,7 @@ def main():
         st.divider()
         st.subheader("Methodology")
         #im4 = Image.open('G:/knowledge_graphs_faster_rcnn/block1.png')
-        im4 = Image.open('../fastercnn-pytorch-training-pipeline/arch_img.png')
+        im4 = Image.open('./arch_img.png')
         st.image(im4, 'Architecture')
         st.write('''
                 We used Faster RCNN model to train our custom dataset. Restricting our project to the medical field, our dataset consists of 11 classes.
@@ -96,7 +96,7 @@ def main():
                 ''')
         # Allow the user to upload an image file
         #im5 = Image.open('G:/knowledge_graphs_faster_rcnn/graph (1).png')
-        im5 = Image.open('../fastercnn-pytorch-training-pipeline/kb_full.png')
+        im5 = Image.open('./kb_full.png')
         st.image(im5, 'Knowledge Base')
 
         st.divider()
@@ -108,13 +108,13 @@ def main():
                 Relationship labels are represented as directed edges.
                 ''')
         results_eval = pd.read_csv(
-            'G:/knowledge_graphs_faster_rcnn/faster_rcnn_custom/fastercnn-pytorch-training-pipeline/outputs/training/custom_training/results.csv')
+            './outputs/training/custom_training/results.csv')
         st.write(results_eval)
         imm = Image.open(
-            'G:/knowledge_graphs_faster_rcnn/faster_rcnn_custom/fastercnn-pytorch-training-pipeline/outputs/training/custom_training/map.png')
+            './outputs/training/custom_training/map.png')
         st.image(imm, "mAP mean Average Precision")
         imm1 = Image.open(
-            'G:/knowledge_graphs_faster_rcnn/faster_rcnn_custom/fastercnn-pytorch-training-pipeline/outputs/training/custom_training/train_loss_epoch.png')
+            './outputs/training/custom_training/train_loss_epoch.png')
         st.image(imm1, "Training loss")
         st.subheader("Future Work")
         st.write('''
@@ -143,7 +143,7 @@ We believe that the biggest problem of classic scene graph generation (SGG) come
             st.image(uploaded_file)
             image = Image.open(uploaded_file)
             image = image.save(
-                '../fastercnn-pytorch-training-pipeline/example_test_data/test_image.jpg')
+                './example_test_data/test_image.jpg')
 
             # frame = np.array(image)
             # Run inference on the image and get the result
@@ -159,13 +159,13 @@ We believe that the biggest problem of classic scene graph generation (SGG) come
 
 def inf_output():
     clas = []
-    with open('../fastercnn-pytorch-training-pipeline/example_test_data/final_inf.txt', 'r') as f:
+    with open('./example_test_data/final_inf.txt', 'r') as f:
         for line in f:
             clas.append(line.strip('\n'))
     f.close()
     st.subheader('FINAL INFERENCE:')
     im2 = Image.open(
-        '../fastercnn-pytorch-training-pipeline/example_test_data/test_image.jpg')
+        './example_test_data/test_image.jpg')
     st.image(im2, "Input Image")
     for i in set(clas):
         st.write(f'##### {i}')
@@ -194,7 +194,7 @@ def check_room(classes, clas, graph):
                 final_inf.append(temp)
                 st.write(row['d']['name'], row['r1']
                          ['name'], row['n1']['name'])
-            with open('../fastercnn-pytorch-training-pipeline/example_test_data/final_inf.txt', 'a') as file:
+            with open('./example_test_data/final_inf.txt', 'a') as file:
                 for pr in final_inf:
                     file.write(pr)
                     file.write('\n')
@@ -218,7 +218,7 @@ def check_room(classes, clas, graph):
                 final_inf.append(temp)
                 st.write(row['d']['name'], row['r1']
                          ['name'], row['n1']['name'])
-            with open('../fastercnn-pytorch-training-pipeline/example_test_data/final_inf.txt', 'a') as file:
+            with open('./example_test_data/final_inf.txt', 'a') as file:
                 for pr in final_inf:
                     file.write(pr)
                     file.write('\n')
@@ -241,7 +241,7 @@ def check_room(classes, clas, graph):
                 final_inf.append(temp)
                 st.write(row['d']['name'], row['r1']
                          ['name'], row['n1']['name'])
-            with open('../fastercnn-pytorch-training-pipeline/example_test_data/final_inf.txt', 'a') as file:
+            with open('./example_test_data/final_inf.txt', 'a') as file:
                 for pr in final_inf:
                     file.write(pr)
                     file.write('\n')
