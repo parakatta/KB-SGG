@@ -307,7 +307,7 @@ def set_infer_dir():
     next_dir_num = num_infer_dirs_present + 1
     new_dir_name = f"outputs/inference/res_{next_dir_num}"
     os.makedirs(new_dir_name, exist_ok=True)
-    with open('../fastercnn-pytorch-training-pipeline/example_test_data/dir_num.txt','w') as fil:
+    with open('../example_test_data/dir_num.txt','w') as fil:
             fil.write(str(next_dir_num))
     return new_dir_name
 
