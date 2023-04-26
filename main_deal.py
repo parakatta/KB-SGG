@@ -110,13 +110,13 @@ def main():
                 Relationship labels are represented as directed edges.
                 ''')
         results_eval = pd.read_csv(
-            './outputs/training/custom_training/results.csv')
+            './results.csv')
         st.write(results_eval)
         imm = Image.open(
-            './outputs/training/custom_training/map.png')
+            './map.png')
         st.image(imm, "mAP mean Average Precision")
         imm1 = Image.open(
-            './outputs/training/custom_training/train_loss_epoch.png')
+            './train_loss_epoch.png')
         st.image(imm1, "Training loss")
         st.subheader("Future Work")
         st.write('''
