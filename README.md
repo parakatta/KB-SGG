@@ -42,10 +42,12 @@ We hope to use this project to help the visually impaired and the elderly to bet
 First, download the repo as zip file.
 cd into your working directory.
 #### 1. Install the dependencies.
-``` pip install -r requirements.txt 
+``` 
+pip install -r requirements.txt 
 ```
 #### 2. Run the streamlit server
-``` streamlit run main_deal.py 
+``` 
+streamlit run main_deal.py 
 ```
 
 
