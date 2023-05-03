@@ -17,7 +17,6 @@ The major contributions of our proposed work are:
 We used Faster RCNN model to train our custom dataset. Restricting our project to the medical field, our dataset consists of 11 classes. These classes depict the day to day basic scenarios in a hospital - cardiac_monitor, doctor, face_mask, iv_fluids, oxygen_mask, patient, stethoscope, syringe, ventilator, lightings, patient_bed.
 The nodes and relationships are created using SVO triplets - Subject Verb and Objects. A complete triplet includes the predicate label and the class labels as well as the bounding box coordinates of the subject and object. All inferences will be based on the SVO triplets.
 The predicate classes used are - USES, HAS, IN, LAY_ON, RECEIVES, CHECKS, READS, TREATS, INJECTED_TO, WEARS. The knowledge base is populated with the SVO triplets that depicts simple scenarios in the medical field. We have 12 nodes and 21 relationsips as of now.  
-
 ![kb_full](https://user-images.githubusercontent.com/83866928/235880886-9ba3caa8-faa5-43de-992d-8db298d44ba9.png)
 
 ## Performance  
@@ -43,9 +42,11 @@ We hope to use this project to help the visually impaired and the elderly to bet
 First, download the repo as zip file.
 cd into your working directory.
 #### 1. Install the dependencies.
-``` pip install -r requirements.txt```
+``` pip install -r requirements.txt 
+```
 #### 2. Run the streamlit server
-```streamlit run main_deal.py```
+``` streamlit run main_deal.py 
+```
 
 
 
